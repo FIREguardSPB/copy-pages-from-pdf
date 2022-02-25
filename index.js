@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'build')))
 console.log(path.resolve(__dirname, '../uploads'))
 
 setInterval(async () => {
-  await fetch('https://parserimagefrompdf.herokuapp.com/');
+  await fetch('https://copy-pages-from-pdf.herokuapp.com/');
 }, 1000 * 60 * 20)
 
 
