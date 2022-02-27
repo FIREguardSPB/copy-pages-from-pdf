@@ -7,16 +7,7 @@ const PORT = process.env.PORT || 5000
 app.use(express.json());
 app.use(express.urlencoded({extended: false}))
 app.use(bodyParser.urlencoded({extended: true}));
-
 app.use(express.static(path.join(__dirname, 'build')))
-
-
-console.log(path.resolve(__dirname, '../uploads'))
-
-setInterval(async () => {
-  await fetch('https://copy-pages-from-pdf.herokuapp.com/');
-}, 1000 * 60 * 20)
-
 
 async function startApp() {
   try {
